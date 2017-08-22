@@ -1,5 +1,10 @@
+<style>
+  .noUi-horizontal {
+    height: 5px;
+}
+</style>
 <template>
-  <div id="sliderRegular" class="slider slider-info noUi-target noUi-ltr noUi-horizontal">
+  <div id="sliderRegular" class="slider slider-info noUi-target noUi-ltr noUi-horizontal" @click="setSlider">
     <div class="noUi-base">
       <div class="noUi-connect" :style="{'left': '0','right': `${widthPercComplement}%`}"></div>
       <div class="noUi-origin" :style="{'left': `${widthPerc}%`}">
@@ -10,7 +15,8 @@
   </div>
 </template>
 <script>
-  export default{
+  export default {
+    name: 'n-slider',
     props: {
       value: {
         type: Number,
@@ -39,6 +45,10 @@
     methods: {
       toggleActive() {
         this.active = !this.active
+      },
+      setSlider() {
+        console.log('set slider')
+        console.log(this.$el.offsetY)
       }
     }
   }

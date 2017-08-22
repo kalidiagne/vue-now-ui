@@ -12,6 +12,7 @@ import Label from '../src/components/label/index.js'
 import Navbar from '../src/components/navbar/index.js'
 import Icon from '../src/components/icon/index.js'
 import Alert from '../src/components/alert/index.js'
+import Slider from '../src/components/slider/index.js'
 const plugins = [
   Button,
   Checkbox,
@@ -24,7 +25,8 @@ const plugins = [
   Label,
   Navbar,
   Icon,
-  Alert
+  Alert,
+  Slider
 ]
 const install = function(Vue, opts = {}) {
   /* istanbul ignore if */
@@ -54,5 +56,6 @@ export default {
   Label,
   Navbar,
   Icon,
-  Alert
+  Alert,
+  Slider
 }
